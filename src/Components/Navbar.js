@@ -74,16 +74,9 @@ export default function SearchAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            KIWI Escapade
+            KIWI ESCAPADE
+            <i class="fas fa-kiwi-bird"></i>
           </Typography>
           <MenuItem>Small Group Tours</MenuItem>
           <MenuItem>About Us</MenuItem>
