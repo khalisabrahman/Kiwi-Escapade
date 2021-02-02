@@ -2,8 +2,12 @@
 import React, { useRef, Fragment } from 'react';
 import Glide, { Slide } from 'react-glidejs';
 
-import 'react-glidejs/dist/index.css';
+import '../../node_modules/react-glidejs/dist/index.css';
 import '../styles/transitions.css';
+import queenstown from '../images/queenstown.jpg';
+import kokatahi from '../images/Kokatahi.jpg';
+import mtcook from '../images/Mtcook.jpg';
+import video from '../assets/Lake_Mountain_Timelapse.mp4';
 
 function HeroSlider() {
   const gliderRef = useRef(null);
@@ -12,67 +16,36 @@ function HeroSlider() {
     <div
       className="App"
       style={{
-        background: 'blue',
+        background: 'pink',
+        width: '100%',
+        height: '570px'
+        
       }}
     >
       <Glide
         ref={gliderRef}
         throttle={0}
         type="slider"
-        customSlideAnimation={{
-          timeout: 500,
-          classNames: 'fade',
-        }}
-        peek={{
-          before: 500,
-          after: 500,
-        }}
+        // customSlideAnimation={{
+        //   timeout: 500,
+        //   classNames: 'fade',
+        // }}
         perView={1}
-        startAt={3}
-        slideClassName="slider__frame"
-        focusAt="center"
+        startAt={0}
+        // slideClassName="slider__frame"
       >
+        
         <Fragment>
-          1
+          <img src={kokatahi} alt="" style={{height: '570px', width: '100%', objectFit: 'cover'}}></img>
         </Fragment>
         <Fragment>
-          2
+          <img src={mtcook} alt="" style={{height: '570px', width: '100%', objectFit: 'cover'}}></img>
         </Fragment>
         <Fragment>
-          3
+          <img src={kokatahi} alt="" style={{height: '570px', width: '100%', objectFit: 'cover'}}></img>
         </Fragment>
         <Fragment>
-          4
-        </Fragment>
-        <Fragment>
-          5
-        </Fragment>
-        <Fragment>
-          6
-        </Fragment>
-        <Fragment>
-          7
-        </Fragment>
-        <Fragment>
-          8
-        </Fragment>
-        <Fragment>
-          9
-        </Fragment>
-        <Fragment>
-          10
-        </Fragment>
-        <Fragment>
-          11
-        </Fragment>
-        <Fragment>
-          12
-        </Fragment>
-        <Fragment>
-          13
-        </Fragment>
-        <Fragment>
-          14
+          <img src={queenstown} alt="" style={{height: '570px', width: '100%', objectFit: 'cover'}}></img>
         </Fragment>
       </Glide>
     </div>

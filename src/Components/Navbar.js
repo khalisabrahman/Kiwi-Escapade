@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   toolbar: {
-    backgroundColor: '#5c9b3f'
+    backgroundColor: '#5c9b3f',
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
