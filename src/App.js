@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import Navbar from './Components/Navbar';
 import HeroSlider from './Components/HeroSlider';
 import Deals from './Components/Deals';
-import Content from './Components/Content';
 import './App.css';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
@@ -20,7 +19,7 @@ function App() {
 				<Navbar />
 				<HeroSlider />
 				<Deals />
-				<Content />
+				
 			</ThemeProvider>
 		</Fragment>
 	);
