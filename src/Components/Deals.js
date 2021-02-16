@@ -5,12 +5,12 @@ import 'react-glide/lib/reactGlide.css';
 
 const useStyle = makeStyles((theme) => ({
 	title: {
-		marginTop: '40px',
+		marginTop: '50px',
 		marginBottom: '0px',
 		display: 'flex',
 		justifyContent: 'center',
 		fontSize: '44px',
-		fontWeight: '700',
+		fontWeight: '900',
 		fontFamily: 'catamaran',
 	},
 	subtitle: {
@@ -24,18 +24,70 @@ const useStyle = makeStyles((theme) => ({
 	dealsContainer: {
 		display: 'flex',
 		justifyContent: 'center',
+		position: 'relative',
+		marginBottom: '70px',
 	},
+
 	dealBox: {
 		height: '393px',
 		width: '278px',
-		backgroundColor: 'pink',
 		margin: '15px',
-    },
-    dealImage: {
-        width: '100%',
-        objectFit:'cover',
-        height: '393px'
-    },
+		position: 'relative',
+	},
+	dealImage: {
+		width: '100%',
+		objectFit: 'cover',
+		height: '393px',
+	},
+	dealTitle: {
+		fontWeight: '900',
+		fontFamily: 'catamaran',
+		fontSize: '1.2rem',
+		position: 'absolute',
+		top: '15px',
+		left: '15px',
+		textTransform: 'uppercase',
+		color: 'white',
+		margin: '0',
+		lineHeight: '20px',
+	},
+	label: {
+		position: 'relative',
+		clear: 'both',
+		color: 'white',
+		fontSize: '0.8rem',
+		fontWeight: '600',
+		background: '#30353a',
+		width: '13ch',
+	},
+
+	dealMain: {
+		position: 'absolute',
+		fontWeight: '900',
+		fontFamily: 'catamaran',
+		bottom: '25px',
+		left: '15px',
+		color: 'white',
+		margin: '0',
+
+		lineHeight: '20px',
+		'& h3': {
+			fontSize: '1.3rem',
+			textTransform: 'uppercase',
+		},
+		'& h4': {
+			fontSize: '1rem',
+			textTransform: 'uppercase',
+		},
+		'& p::after': {
+			content: "''",
+			width: '0',
+			height: '0',
+			borderTop: '20px solid #30353a',
+			borderRight: '20px solid transparent',
+		},
+	},
+
 	exploreContainer: {
 		display: 'flex',
 		justifyContent: 'center',
@@ -45,7 +97,10 @@ const useStyle = makeStyles((theme) => ({
 	exploreBox: {
 		height: '393px',
 		width: '25%',
-		backgroundColor: 'pink',
+        background: `url(https://images.pexels.com/photos/2433353/pexels-photo-2433353.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain'
 	},
 	whyUs: {
 		display: 'flex',
@@ -62,7 +117,8 @@ const useStyle = makeStyles((theme) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		width: '100%',
-		alignItems: 'center',
+        alignItems: 'center',
+        marginBottom: '30px'
 	},
 }));
 
@@ -81,36 +137,43 @@ function Deals() {
 
 			<Fragment>
 				<div className={classes.dealsContainer}>
-                {dealsArray.map((deal) => {
-                    return (
-                        <div className={classes.dealBox}>
-                            <img src={deal.img} className={classes.dealImage}></img>
-                        </div>    
-                    )
-                })}
+					{dealsArray.map((deal) => {
+						return (
+							<div className={classes.dealBox}>
+								<img
+									src={deal.img}
+									className={classes.dealImage}
+									alt='deal images'
+								></img>
+								<p className={classes.dealTitle}>Experience New Zealand</p>
+
+								<div className={classes.dealMain}>
+									<p className={classes.label}>Small Group Tour</p>
+									<h3>{deal.description}</h3>
+									<h4>{deal.timeline}</h4>
+								</div>
+							</div>
+						);
+					})}
 				</div>
-				
-				{/* <div className={classes.dealsContainer}>
-					<div className={classes.dealBox}>1</div>
-					<div className={classes.dealBox}>2</div>
-					<div className={classes.dealBox}>3</div>
-					<div className={classes.dealBox}>4</div>
-				</div> */}
 			</Fragment>
-			<h1 className={classes.title}>EXPLORE OUR TRAVEL STYLES</h1>
-			<p className={classes.subtitle}>
-				We've got you covered. Kiwi Experience offers a range of different travel
-				styles to help you experience our New Zealand, your way.
-			</p>
+
 			<Fragment>
+				<div className={classes.testing}>
+					<h1 className={classes.title}>EXPLORE OUR TRAVEL STYLES</h1>
+					<p className={classes.subtitle}>
+                    We've got you covered. Kiwi Experience offers a range of different travel
+					styles to help you experience our New Zealand, your way.
+					</p>
+				</div>
 				<div className={classes.exploreContainer}>
-					<div className={classes.exploreBox}>1</div>
+					<div className={classes.exploreBox}></div>
 					<div className={classes.exploreBox} style={{ marginTop: '84px' }}>
-						2
+						
 					</div>
-					<div className={classes.exploreBox}>3</div>
+					<div className={classes.exploreBox}></div>
 					<div className={classes.exploreBox} style={{ marginTop: '84px' }}>
-						4
+						
 					</div>
 				</div>
 			</Fragment>

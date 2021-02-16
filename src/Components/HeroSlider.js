@@ -155,6 +155,7 @@ function HeroSlider() {
 						onClick={() => {
 							alert('clicked');
 						}}
+						style={{width: '15ch'}}
 					>
 						FIND MY ADVENTURE!
 					</Button>
