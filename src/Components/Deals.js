@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import dealsArray from '../constants/deals.js';
+import exploreArray from '../constants/explore.js';
 import 'react-glide/lib/reactGlide.css';
 
 const useStyle = makeStyles((theme) => ({
@@ -91,16 +92,25 @@ const useStyle = makeStyles((theme) => ({
 	exploreContainer: {
 		display: 'flex',
 		justifyContent: 'center',
-		width: '100%',
-		height: '477px',
+		width: '100vw',
+        height: '477px',
+        marginBottom: '70px',
 	},
 	exploreBox: {
 		height: '393px',
 		width: '25%',
-        background: `url(https://images.pexels.com/photos/2433353/pexels-photo-2433353.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)`,
+        // background: `url(https://images.pexels.com/photos/3741382/pexels-photo-3741382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain'
+        backgroundSize: 'cover',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& h2': {
+            color: '#FFFFFF',
+            fontWeight: '900',
+            fontSize: '1.8rem'
+        }
 	},
 	whyUs: {
 		display: 'flex',
@@ -113,7 +123,7 @@ const useStyle = makeStyles((theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 	},
-	testing: {
+	section: {
 		display: 'flex',
 		flexDirection: 'column',
 		width: '100%',
@@ -126,7 +136,7 @@ function Deals() {
 	const classes = useStyle();
 	return (
 		<>
-			<div className={classes.testing}>
+			<div className={classes.section}>
 				<h1 className={classes.title}>DEALS</h1>
 				<p className={classes.subtitle}>
 					Looking to save up to 20% on a last-minute deal? You’ve come to the right
@@ -159,7 +169,7 @@ function Deals() {
 			</Fragment>
 
 			<Fragment>
-				<div className={classes.testing}>
+				<div className={classes.section}>
 					<h1 className={classes.title}>EXPLORE OUR TRAVEL STYLES</h1>
 					<p className={classes.subtitle}>
                     We've got you covered. Kiwi Experience offers a range of different travel
@@ -167,14 +177,28 @@ function Deals() {
 					</p>
 				</div>
 				<div className={classes.exploreContainer}>
-					<div className={classes.exploreBox}></div>
-					<div className={classes.exploreBox} style={{ marginTop: '84px' }}>
-						
-					</div>
-					<div className={classes.exploreBox}></div>
-					<div className={classes.exploreBox} style={{ marginTop: '84px' }}>
-						
-					</div>
+
+                    {exploreArray.map((explore) => {
+                        if(explore.id == 1 || explore.id == 3) {
+                            return (
+                                <div style={{background: `url(${explore.img})`, backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: 'cover'}} className={classes.exploreBox} >
+                                    <h2>{explore.description}</h2>
+                                </div>
+                            )
+                        }
+                        else {
+                            return (
+                                <div style={{background: `url(${explore.img})`, marginTop: '84px', backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: 'cover'}} className={classes.exploreBox} >
+                                    <h2>{explore.description}</h2>
+                                </div>
+                            )
+                        }
+                        
+                    })}
 				</div>
 			</Fragment>
 			<Fragment>
