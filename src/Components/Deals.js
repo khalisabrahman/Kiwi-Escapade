@@ -7,10 +7,13 @@ import {
 	FaTree,
 	FaWallet,
 	FaMedal,
+	FaRegStar,
 } from '../../node_modules/react-icons/fa';
 import dealsArray from '../constants/deals.js';
 import exploreArray from '../constants/explore.js';
 import 'react-glide/lib/reactGlide.css';
+import { Glide } from 'react-glide';
+import Button from '@material-ui/core/Button';
 
 const useStyle = makeStyles((theme) => ({
 	title: {
@@ -141,8 +144,8 @@ const useStyle = makeStyles((theme) => ({
 		fontSize: '1rem',
 		display: 'block',
 		width: '175px',
-        height: '350px',
-        margin: '10px'
+		height: '350px',
+		margin: '10px',
 	},
 	triangle1: {
 		width: '0',
@@ -188,22 +191,98 @@ const useStyle = makeStyles((theme) => ({
 		alignItems: 'center',
 		marginBottom: '30px',
 	},
+	galleryWrapper: {
+		width: '100%',
+		height: '820px',
+		fontSize: '1.5em',
+		color: 'white',
+		textTransform: 'uppercase',
+		textAlign: 'center',
+		display: 'grid',
+		gridTemplateRows: '400px 400px',
+		gridTemplateColumns: '356.25px 356.25px 356.25px 356.25px',
+		gridGap: '5px',
+		backgroundColor: 'white',
+	},
+	a: {
+		gridColumn: '1/3',
+		gridRow: '1/2',
+		background: `url(https://images.pexels.com/photos/844528/pexels-photo-844528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		backgroundPosition: 'bottom center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	b: {
+		gridColumn: '3/4',
+		gridRow: '1/2',
+		background: `url(https://images.pexels.com/photos/724963/pexels-photo-724963.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		backgroundPosition: 'bottom center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	c: {
+		gridColumn: '4/5',
+		gridRow: '1/2',
+		background: `url(https://images.pexels.com/photos/2108845/pexels-photo-2108845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		backgroundPosition: 'center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	d: {
+		background: `url(https://images.pexels.com/photos/5169015/pexels-photo-5169015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		backgroundPosition: 'bottom center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	e: {
+		gridColumn: '2/3',
+		gridRow: '2/3',
+		background: `url(https://images.pexels.com/photos/3217911/pexels-photo-3217911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		backgroundPosition: 'top center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	f: {
+		gridColumn: '3/5',
+		gridRow: '2/3',
+		background: `url(https://cdn.pixabay.com/photo/2013/05/26/10/51/maori-113729_960_720.jpg)`,
+		backgroundPosition: 'top center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
 }));
 
 function Deals() {
 	const classes = useStyle();
 	return (
 		<>
-			<div className={classes.section}>
-				<h1 className={classes.title}>DEALS</h1>
-				<p className={classes.subtitle}>
-					Looking to save up to 20% on a last-minute deal? You’ve come to the right
-					place. Whatever kind of New Zealand experience you’re looking for, we
-					reckon we can help you save a little extra cash.
-				</p>
-			</div>
-
 			<Fragment>
+				<div className={classes.section}>
+					<h1 className={classes.title}>DEALS</h1>
+					<p className={classes.subtitle}>
+						Looking to save up to 20% on a last-minute deal? You’ve come to the right
+						place. Whatever kind of New Zealand experience you’re looking for, we
+						reckon we can help you save a little extra cash.
+					</p>
+				</div>
 				<div className={classes.dealsContainer}>
 					{dealsArray.map((deal) => {
 						return (
@@ -340,6 +419,100 @@ function Deals() {
 							</p>
 						</div>
 					</section>
+				</div>
+			</Fragment>
+			<Fragment>
+				<div className={classes.section}>
+					<h1 className={classes.title}>NEW ZEALAND HIGHLIGHTS</h1>
+					<p className={classes.subtitle}>
+						After 30 years on the road, we truly are the experts on all things New
+						Zealand. Let us share and inspire you to experience our New Zealand with
+						you.
+					</p>
+				</div>
+				<div className={classes.galleryWrapper}>
+					<div className={classes.a}>
+						<h2>guide to skiing new zealand on a budget</h2>
+					</div>
+					<div className={classes.b}>
+						<h2>queenstown</h2>
+					</div>
+					<div className={classes.c}>
+						<h2>explore new zealand's great walk</h2>
+					</div>
+					<div className={classes.d}>
+						<h2>bungy</h2>
+					</div>
+					<div className={classes.e}>
+						<h2>solo travel</h2>
+					</div>
+					<div className={classes.f}>
+						<h2>Māori culture</h2>
+					</div>
+				</div>
+			</Fragment>
+
+			<Fragment>
+				<div className={classes.section}>
+					<h1 className={classes.title}>SEE WHAT OTHERS HAVE TO SAY</h1>
+				</div>
+				<Glide
+					height={'570px'}
+					width={'100%'}
+					// autoPlay={true}
+					// autoPlaySpeed={3500}
+					dots={false}
+					infinite={true}
+				>
+					<div
+						style={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							height: '570px',
+							width: '100%',
+
+							backgroundColor: 'pink',
+						}}
+					>
+						<div>
+							<h2>HOP-ON HOP-OFF REVIEW</h2>
+							<div>
+								<span>
+									<FaRegStar color='yellow' />
+									<FaRegStar color='yellow' />
+									<FaRegStar color='yellow' />
+									<FaRegStar color='yellow' />
+									<FaRegStar color='yellow' />
+								</span>
+							</div>
+							<p>Good fun, difference experience</p>
+							<h4 style={{ width: '45ch' }}>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+								praesentium exercitationem tempore reprehenderit nemo fugiat
+								accusantium. Maxime cumque, quibusdam sunt officiis veniam voluptas
+								atque magnam, quod vero, vitae fugit placeat reprehenderit! Aspernatur
+								ea odio aperiam nemo quidem assumenda quae reprehenderit ipsam, iusto
+								illum, dignissimos aliquid.
+							</h4>
+							<h4>-Raihana (Singapore)</h4>
+						</div>
+					</div>
+
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+				</Glide>
+				<div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+					<Button
+						variant='contained'
+						onClick={() => {
+							alert('clicked');
+						}}
+						style={{ width: '15ch' }}
+					>
+						READ MORE
+					</Button>
 				</div>
 			</Fragment>
 		</>
