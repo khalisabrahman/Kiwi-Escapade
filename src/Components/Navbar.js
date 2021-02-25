@@ -8,16 +8,19 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import {FaKiwiBird} from '../../node_modules/react-icons/fa';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 	},
 	toolbar: {
-		backgroundColor: '#5c9b3f',
+		backgroundColor: '#28527a',
+		
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
+		
 	},
 	title: {
 		flexGrow: 1,
@@ -25,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.up('sm')]: {
 			display: 'block',
 		},
+		color: '#f4d160'
 	},
 	search: {
 		position: 'relative',
@@ -76,8 +80,9 @@ export default function SearchAppBar() {
 				<AppBar position='fixed'>
 					<Toolbar className={classes.toolbar}>
 						<Typography className={classes.title} variant='h6' noWrap>
-							KIWI ESCAPADE
+							KIWI VACATIONS!
 							<i class='fas fa-kiwi-bird'></i>
+							<FaKiwiBird color='#f4d160'/>
 						</Typography>
 						<MenuItem>Small Group Tours</MenuItem>
 						<MenuItem>About Us</MenuItem>

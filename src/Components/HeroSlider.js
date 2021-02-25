@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 		top: 0,
 		left: 0,
 		zIndex: -1,
+		
 	},
 	heroText: {
 		display: 'flex',
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
+		marginTop: '20px'
 	},
 }));
 
@@ -107,7 +109,7 @@ function HeroSlider() {
 				/>
 			</Glide>
 				<div className={classes.formContainer}>
-					<FormControl className={classes.formControl}>
+					<FormControl outlined className={classes.formControl}>
 						<InputLabel id='travel-duration-label'>Travel Time</InputLabel>
 						<Select
 							labelId='travel-duration-label'
@@ -141,7 +143,7 @@ function HeroSlider() {
 						<Select
 							labelId='travel-style-label'
 							id='travel-style'
-							value={destination}
+							value={travelStyle}
 							onChange={handleChangeTravelStyle}
 							label='Style'
 						>
@@ -155,7 +157,7 @@ function HeroSlider() {
 						onClick={() => {
 							alert('clicked');
 						}}
-						style={{width: '15ch'}}
+						style={{width: '20ch', backgroundColor: '#f4d160'}}
 					>
 						FIND MY ADVENTURE!
 					</Button>

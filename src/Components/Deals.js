@@ -8,8 +8,15 @@ import {
 	FaWallet,
 	FaMedal,
 	FaRegStar,
+	FaFacebook,
+	FaFacebookF,
+	FaTwitter,
+	FaInstagram,
+	FaGooglePlusG,
+	FaYoutube,
 } from '../../node_modules/react-icons/fa';
 import dealsArray from '../constants/deals.js';
+import reviews from '../constants/reviews.js';
 import exploreArray from '../constants/explore.js';
 import 'react-glide/lib/reactGlide.css';
 import { Glide } from 'react-glide';
@@ -147,6 +154,9 @@ const useStyle = makeStyles((theme) => ({
 		height: '350px',
 		margin: '10px',
 	},
+	whyIcons: {
+		margin: '5px'
+	},
 	triangle1: {
 		width: '0',
 		height: '0',
@@ -194,6 +204,7 @@ const useStyle = makeStyles((theme) => ({
 	galleryWrapper: {
 		width: '100%',
 		height: '820px',
+		marginTop: '60px',
 		fontSize: '1.5em',
 		color: 'white',
 		textTransform: 'uppercase',
@@ -267,6 +278,31 @@ const useStyle = makeStyles((theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+	},
+	socialMediaContainer: {
+		backgroundColor: 'white',
+		borderRadius: '50%',
+		padding: '5px',
+		width: '40px',
+		height: '40px',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		margin: '10px',
+	},
+	footer: {
+		backgroundColor: '#28527a',
+	},
+	gutterMain: {
+		display: 'flex',
+		justifyContent: 'space-between',
+		marginRight: '20px',
+	},
+	footerIcons: {
+		display: 'flex'
+	},
+	footerBox: {
+		margin: '30px',
 	},
 }));
 
@@ -354,7 +390,7 @@ function Deals() {
 					<section className={classes.whyUsContainer}>
 						<div className={classes.whyHead}>
 							<div className={classes.triangle1}>
-								<GrBus size='2.5em' />
+								<GrBus size='2.5em' className={classes.whyIcons}/>
 							</div>
 							<h3>AUTHENTIC EXPERIENCES</h3>
 							<p>
@@ -365,7 +401,7 @@ function Deals() {
 						</div>
 						<div className={classes.whyHead}>
 							<div className={classes.triangle2}>
-								<GiHeartBeats size='2.5em' />
+								<GiHeartBeats size='2.5em' className={classes.whyIcons}/>
 							</div>
 							<h3>CREATING CONNECTIONS</h3>
 							<p>
@@ -376,7 +412,7 @@ function Deals() {
 						</div>
 						<div className={classes.whyHead}>
 							<div className={classes.triangle3}>
-								<FaRegSmileBeam size='2.5em' />
+								<FaRegSmileBeam size='2.5em' className={classes.whyIcons}/>
 							</div>
 							<h3>OUR PEOPLE</h3>
 							<p>
@@ -387,7 +423,7 @@ function Deals() {
 						</div>
 						<div className={classes.whyHead}>
 							<div className={classes.triangle4}>
-								<FaTree size='2.5em' />
+								<FaTree size='2.5em' className={classes.whyIcons}/>
 							</div>
 							<h3>GREEN, NOT MEAN</h3>
 							<p>
@@ -398,7 +434,7 @@ function Deals() {
 						</div>
 						<div className={classes.whyHead}>
 							<div className={classes.triangle5}>
-								<FaWallet size='2.5em' />
+								<FaWallet size='2.5em' className={classes.whyIcons}/>
 							</div>
 							<h3>UNBEATABLE VALUE</h3>
 							<p>
@@ -409,7 +445,7 @@ function Deals() {
 						</div>
 						<div className={classes.whyHead}>
 							<div className={classes.triangle6}>
-								<FaMedal size='2.5em' />
+								<FaMedal size='2.5em' className={classes.whyIcons}/>
 							</div>
 							<h3>AWARD WINNING</h3>
 							<p>
@@ -464,55 +500,122 @@ function Deals() {
 					dots={false}
 					infinite={true}
 				>
-					<div
-						style={{
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-							height: '570px',
-							width: '100%',
-
-							backgroundColor: 'pink',
-						}}
-					>
-						<div>
-							<h2>HOP-ON HOP-OFF REVIEW</h2>
-							<div>
-								<span>
-									<FaRegStar color='yellow' />
-									<FaRegStar color='yellow' />
-									<FaRegStar color='yellow' />
-									<FaRegStar color='yellow' />
-									<FaRegStar color='yellow' />
-								</span>
+					{reviews.map((review) => {
+						return (
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									height: '500px',
+									width: '100%',
+								}}
+							>
+								<div>
+									<h2>{review.title}</h2>
+									<div>
+										<span>{review.stars}</span>
+									</div>
+									<p>{review.subtitle}</p>
+									<h4 style={{ width: '45ch' }}>{review.review}</h4>
+									<h4>{review.reviewer}</h4>
+								</div>
 							</div>
-							<p>Good fun, difference experience</p>
-							<h4 style={{ width: '45ch' }}>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-								praesentium exercitationem tempore reprehenderit nemo fugiat
-								accusantium. Maxime cumque, quibusdam sunt officiis veniam voluptas
-								atque magnam, quod vero, vitae fugit placeat reprehenderit! Aspernatur
-								ea odio aperiam nemo quidem assumenda quae reprehenderit ipsam, iusto
-								illum, dignissimos aliquid.
-							</h4>
-							<h4>-Raihana (Singapore)</h4>
-						</div>
-					</div>
-
-					<div>2</div>
-					<div>3</div>
-					<div>4</div>
+						);
+					})}
 				</Glide>
-				<div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+				<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
 					<Button
 						variant='contained'
 						onClick={() => {
 							alert('clicked');
 						}}
-						style={{ width: '15ch' }}
+						style={{ width: '15ch', backgroundColor: '#f4d160' }}
 					>
 						READ MORE
 					</Button>
+				</div>
+			</Fragment>
+
+			<Fragment>
+				<div
+					className={classes.section}
+					style={{
+						height: '650px',
+						minWidth: 'auto',
+						background: `url(https://images.pexels.com/photos/326058/pexels-photo-326058.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+						marginBottom: '0px',
+					}}
+				>
+					<h1 className={classes.title}>CUSTOMER STORIES</h1>
+					<p className={classes.subtitle}>
+						We’ve hosted over 500,000 passengers in our 30 years. Check out their
+						stories here
+					</p>
+					<div style={{ display: 'flex', marginBottom: '200px' }}>
+						<div className={classes.socialMediaContainer}>
+							<FaFacebook size='1.2em' />
+						</div>
+						<div className={classes.socialMediaContainer}>
+							<FaTwitter size='1em' />
+						</div>
+						<div className={classes.socialMediaContainer}>
+							<FaInstagram size='1em' />
+						</div>
+						<div className={classes.socialMediaContainer}>
+							<FaYoutube size='1em' />
+						</div>
+					</div>
+					<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+						<Button
+							variant='contained'
+							onClick={() => {
+								alert('clicked');
+							}}
+							style={{
+								width: '278px',
+								height: '60px',
+								padding: '15px',
+								backgroundColor: '#f4d160',
+								fontSize: '1.1em',
+							}}
+						>
+							EXPLORE ALL EXPERIENCES
+						</Button>
+					</div>
+				</div>
+			</Fragment>
+
+			<Fragment>
+				<div className={classes.footer}>
+					<div className={classes.gutterMain}>
+						<FaFacebookF
+							size='1.8rem'
+							color='white'
+							
+						/>
+						<div className={classes.footerIcons}> 
+							<div className={classes.footerBox}>
+								<FaFacebookF size='1.8rem' color='white' />
+							</div>
+							<div className={classes.footerBox}>
+								<FaGooglePlusG size='1.8rem' color='white' />
+								<p>About us</p>
+							</div>
+							<div className={classes.footerBox}>
+								<FaInstagram size='1.8rem' color='white' />
+								<p>Contact us</p>
+							</div>
+							<div className={classes.footerBox}>
+								<FaYoutube size='1.8rem' color='white' />
+								<p>Blog</p>
+							</div>
+							<div className={classes.footerBox}>
+								<FaTwitter size='1.8rem' color='white' />
+								<p>FAQ's</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</Fragment>
 		</>
