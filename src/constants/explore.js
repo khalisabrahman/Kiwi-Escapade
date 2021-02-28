@@ -1,26 +1,33 @@
-export default [
+import skiing from '../images/Skiing.jpeg';
+import MaoriPole from '../images/MaoriPole.jpeg';
+import friends from '../images/friends.jpeg';
+import hopOn from '../images/hopOn.jpeg';
+
+const ImageArray =  [
     {
         id: 1,
-        img: 'https://images.pexels.com/photos/3741382/pexels-photo-3741382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        img: skiing,
         description: 'SNOW EXPERIENCES',
         
     },
     {
         id: 2,
-        img: 'https://images.pexels.com/photos/6492113/pexels-photo-6492113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        img: MaoriPole,
         description: 'PRIVATE TOURS',
         
     },
     {
         id: 3,
-        img: 'https://images.pexels.com/photos/2647973/pexels-photo-2647973.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        img: friends,
         description: 'SMALL GROUP TOURS',
         
     },
     {
         id: 4,
-        img: 'https://images.pexels.com/photos/2884745/pexels-photo-2884745.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        img: hopOn,
         description: 'HOP-ON HOP-OFF',
     }
 
 ]
+
+export default ImageArray;

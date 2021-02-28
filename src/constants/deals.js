@@ -1,23 +1,30 @@
-export default [
+import Illama from '../images/Illama.jpg'
+import Mountain from '../images/Mountain.jpg'
+import lake from '../images/lake.jpg'
+import whiteMountain from '../images/whiteMountain.jpg'
+
+const DealImage = [
     {
-        img: 'https://images.pexels.com/photos/3396657/pexels-photo-3396657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        img: Illama,
         description: '14 Days North & South Island Tour',
         timeline: '30% off march april 2021'
     },
     {
-        img: 'https://images.pexels.com/photos/3088774/pexels-photo-3088774.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        img: Mountain,
         description: '12 Days North & South Island Tour',
         timeline: '30% off february march 2021'
     },
     {
-        img: 'https://images.pexels.com/photos/163992/pexels-photo-163992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        img: lake,
         description: '10 Days South Island Tour',
         timeline: '20% off february march 2021'
     },
     {
-        img: 'https://images.pexels.com/photos/6738605/pexels-photo-6738605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        img: whiteMountain,
         description: '8 Days South Island Tour',
         timeline: '10% off february march 2021'
     }
 
 ]
+
+export default DealImage;

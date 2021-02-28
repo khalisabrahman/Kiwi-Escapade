@@ -4,12 +4,10 @@ import 'react-glide/lib/reactGlide.css';
 import queenstown from '../images/queenstown.jpg';
 import kokatahi from '../images/Kokatahi.jpg';
 import mtcook from '../images/Mtcook.jpg';
-import video from '../assets/Lake_Mountain_Timelapse.mp4';
 import MountainCook from '../images/MountCook.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
@@ -92,19 +90,19 @@ function HeroSlider() {
 						</p>
 					</div>
 
-					<img src={queenstown} className={classes.heroBackground} />
+					<img src={queenstown} className={classes.heroBackground} alt='queenstown'/>
 				</div>
 
 				<img
-					src={kokatahi}
+					src={kokatahi} alt='kokatahi'
 					style={{ height: '570px', width: '100%', objectFit: 'cover', top: 0 }}
 				/>
 				<img
-					src={mtcook}
+					src={mtcook} alt='mount cook'
 					style={{ height: '570px', width: '100%', objectFit: 'cover', top: 0 }}
 				/>
 				<img
-					src={MountainCook}
+					src={MountainCook} alt='mount cook'
 					style={{ height: '570px', width: '100%', objectFit: 'cover', top: 0 }}
 				/>
 			</Glide>

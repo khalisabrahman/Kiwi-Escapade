@@ -7,7 +7,6 @@ import {
 	FaTree,
 	FaWallet,
 	FaMedal,
-	FaRegStar,
 	FaFacebook,
 	FaFacebookF,
 	FaTwitter,
@@ -18,6 +17,12 @@ import {
 import dealsArray from '../constants/deals.js';
 import reviews from '../constants/reviews.js';
 import exploreArray from '../constants/explore.js';
+import snow from '../images/Snow.jpg';
+import queenstownView from '../images/queenstownView.jpg';
+import hiking from '../images/hiking.jpg';
+import bungy from '../images/bungy.jpg';
+import solo from '../images/solo.jpg';
+import maori from '../images/maori.jpg';
 import 'react-glide/lib/reactGlide.css';
 import { Glide } from 'react-glide';
 import Button from '@material-ui/core/Button';
@@ -218,7 +223,7 @@ const useStyle = makeStyles((theme) => ({
 	a: {
 		gridColumn: '1/3',
 		gridRow: '1/2',
-		background: `url(https://images.pexels.com/photos/844528/pexels-photo-844528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		background: `url(${snow})`,
 		backgroundPosition: 'bottom center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -229,7 +234,7 @@ const useStyle = makeStyles((theme) => ({
 	b: {
 		gridColumn: '3/4',
 		gridRow: '1/2',
-		background: `url(https://images.pexels.com/photos/724963/pexels-photo-724963.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		background: `url(${queenstownView})`,
 		backgroundPosition: 'bottom center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -240,7 +245,7 @@ const useStyle = makeStyles((theme) => ({
 	c: {
 		gridColumn: '4/5',
 		gridRow: '1/2',
-		background: `url(https://images.pexels.com/photos/2108845/pexels-photo-2108845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		background: `url(${hiking})`,
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -249,7 +254,7 @@ const useStyle = makeStyles((theme) => ({
 		alignItems: 'center',
 	},
 	d: {
-		background: `url(https://images.pexels.com/photos/5169015/pexels-photo-5169015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		background: `url(${bungy})`,
 		backgroundPosition: 'bottom center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -260,7 +265,7 @@ const useStyle = makeStyles((theme) => ({
 	e: {
 		gridColumn: '2/3',
 		gridRow: '2/3',
-		background: `url(https://images.pexels.com/photos/3217911/pexels-photo-3217911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+		background: `url(${solo})`,
 		backgroundPosition: 'top center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -271,7 +276,7 @@ const useStyle = makeStyles((theme) => ({
 	f: {
 		gridColumn: '3/5',
 		gridRow: '2/3',
-		background: `url(https://cdn.pixabay.com/photo/2013/05/26/10/51/maori-113729_960_720.jpg)`,
+		background: `url(${maori})`,
 		backgroundPosition: 'top center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -354,13 +359,14 @@ function Deals() {
 						if (explore.id == 1 || explore.id == 3) {
 							return (
 								<div
+									
+									className={classes.exploreBox}
 									style={{
 										background: `url(${explore.img})`,
 										backgroundPosition: 'center',
 										backgroundRepeat: 'no-repeat',
 										backgroundSize: 'cover',
 									}}
-									className={classes.exploreBox}
 								>
 									<h2>{explore.description}</h2>
 								</div>
@@ -368,14 +374,15 @@ function Deals() {
 						} else {
 							return (
 								<div
+									
+									className={classes.exploreBox}
 									style={{
 										background: `url(${explore.img})`,
 										marginTop: '84px',
-										backgroundPosition: 'center',
+										backgroundPosition: ' center',
 										backgroundRepeat: 'no-repeat',
 										backgroundSize: 'cover',
 									}}
-									className={classes.exploreBox}
 								>
 									<h2>{explore.description}</h2>
 								</div>
