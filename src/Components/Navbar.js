@@ -6,7 +6,7 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import SearchIcon from '@material-ui/icons/Search';
-import {FaKiwiBird} from '../../node_modules/react-icons/fa';
+// import {FaKiwiBird} from '../../node_modules/react-icons/fa';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -80,7 +80,7 @@ export default function SearchAppBar() {
 						<Typography className={classes.title} variant='h6' noWrap>
 							KIWI VACATIONS!
 							<i class='fas fa-kiwi-bird'></i>
-							<FaKiwiBird color='#f4d160'/>
+							{/* <FaKiwiBird color='#f4d160'/> */}
 						</Typography>
 						<MenuItem>Small Group Tours</MenuItem>
 						<MenuItem>About Us</MenuItem>

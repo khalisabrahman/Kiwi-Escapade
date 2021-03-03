@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {
-	FaFacebook,
-	FaTwitter,
-	FaInstagram,
-	FaYoutube,
-} from '../../node_modules/react-icons/fa';
+// import {
+// 	FaFacebook,
+// 	FaTwitter,
+// 	FaInstagram,
+// 	FaYoutube,
+// } from '../../node_modules/react-icons/fa';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -65,16 +65,16 @@ const useStyles = makeStyles((theme) => ({
 					</p>
 					<div style={{ display: 'flex', marginBottom: '200px' }}>
 						<div className={classes.socialMediaContainer}>
-							<FaFacebook size='1.2em' />
+							{/* <FaFacebook size='1.2em' /> */}
 						</div>
 						<div className={classes.socialMediaContainer}>
-							<FaTwitter size='1em' />
+							{/* <FaTwitter size='1em' /> */}
 						</div>
 						<div className={classes.socialMediaContainer}>
-							<FaInstagram size='1em' />
+							{/* <FaInstagram size='1em' /> */}
 						</div>
 						<div className={classes.socialMediaContainer}>
-							<FaYoutube size='1em' />
+							{/* <FaYoutube size='1em' /> */}
 						</div>
 					</div>
 					<div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
