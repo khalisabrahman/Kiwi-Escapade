@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: 'center',
 		marginBottom: '30px',
 	},
+	stars: {
+		color: 'yellow'
+	}
 }))
 
  const Reviews = () => {
@@ -52,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
 									<div>
 										<h2>{review.title}</h2>
 										<div>
-											<span>{review.stars}</span>
+											<span className={classes.stars}>{review.stars}</span>
 										</div>
 										<p>{review.subtitle}</p>
 										<h4 style={{ width: '45ch' }}>{review.review}</h4>
