@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react';
-// import { GrBus } from '../../node_modules/react-icons/gr';
-// import { GiHeartBeats } from '../../node_modules/react-icons/gi';
-// import { FaRegSmileBeam, FaTree, FaWallet, FaMedal } from 'react-icons/fa';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { Fragment, Suspense } from 'react';
 
-// const FaRegSmileBeam = React.lazy(() => import('react-icons/fa'));
-// const FaTree = React.lazy(() => import('react-icons/fa'));
-// const FaWallet = React.lazy(() => import('react-icons/fa'));
-// const FaMedal = React.lazy(() => import('react-icons/fa'));
-// const GrBus = React.lazy(() => import('react-icons/gr'));
-// const GiHeartBeats = React.lazy(() => import('react-icons/gi'));
-// const FaTwitter = React.lazy(() => import('react-icons/fa'));
-// const FaInstagram = React.lazy(() => import('react-icons/fa'));
-// const FaGooglePlusG = React.lazy(() => import('react-icons/fa'));
-// const FaYoutube = React.lazy(() => import('react-icons/fa'));
+import { makeStyles } from '@material-ui/core/styles';
+// import BxBusIcon from '../icons/BusIcon';
+// import HeartbeatIcon from '../icons/HeartbeatIcon';
+// import SmileBeamIcon from '../icons/SmileBeamIcon';
+// import PineTreeIcon from '../icons/PineTreeIcon';
+// import WalletIcon from '../icons/WalletIcon';
+// import MedalIcon from '../icons/MedalIcon';
+
+const BxBusIcon = React.lazy(() => import('../icons/BusIcon'));
+const MedalIcon = React.lazy(() => import('../icons/MedalIcon'));
+const HeartbeatIcon = React.lazy(() => import('../icons/HeartbeatIcon'));
+const SmileBeamIcon = React.lazy(() => import('../icons/SmileBeamIcon'));
+const PineTreeIcon = React.lazy(() => import('../icons/PineTreeIcon'));
+const WalletIcon = React.lazy(() => import('../icons/WalletIcon'));
 
 const useStyles = makeStyles((theme) => ({
 	whyUs: {
@@ -90,7 +90,9 @@ const WhyUs = () => {
 				<section className={classes.whyUsContainer}>
 					<div className={classes.whyHead}>
 						<div className={classes.triangle1}>
-							{/* <GrBus size='2.5em' className={classes.whyIcons} /> */}
+							<Suspense fallback={<div>Loading</div>}>
+								<BxBusIcon width='48px' height='48px' className={classes.whyIcons} />
+							</Suspense>
 						</div>
 						<h3>AUTHENTIC EXPERIENCES</h3>
 						<p>
@@ -101,7 +103,13 @@ const WhyUs = () => {
 					</div>
 					<div className={classes.whyHead}>
 						<div className={classes.triangle2}>
-							{/* <GiHeartBeats size='2.5em' className={classes.whyIcons} /> */}
+							<Suspense fallback={<div>Loading</div>}>
+								<HeartbeatIcon
+									width='48px'
+									height='48px'
+									className={classes.whyIcons}
+								/>
+							</Suspense>
 						</div>
 						<h3>CREATING CONNECTIONS</h3>
 						<p>
@@ -112,7 +120,13 @@ const WhyUs = () => {
 					</div>
 					<div className={classes.whyHead}>
 						<div className={classes.triangle3}>
-							{/* <FaRegSmileBeam size='2.5em' className={classes.whyIcons} /> */}
+							<Suspense fallback={<div>Loading</div>}>
+								<SmileBeamIcon
+									width='48px'
+									height='48px'
+									className={classes.whyIcons}
+								/>
+							</Suspense>
 						</div>
 						<h3>OUR PEOPLE</h3>
 						<p>
@@ -123,7 +137,9 @@ const WhyUs = () => {
 					</div>
 					<div className={classes.whyHead}>
 						<div className={classes.triangle4}>
-							{/* <FaTree size='2.5em' className={classes.whyIcons} /> */}
+							<Suspense fallback={<div>Loading</div>}>
+								<PineTreeIcon width='48px' height='48px' className={classes.whyIcons} />
+							</Suspense>
 						</div>
 						<h3>GREEN, NOT MEAN</h3>
 						<p>
@@ -134,7 +150,9 @@ const WhyUs = () => {
 					</div>
 					<div className={classes.whyHead}>
 						<div className={classes.triangle5}>
-							{/* <FaWallet size='2.5em' className={classes.whyIcons} /> */}
+							<Suspense fallback={<div>Loading</div>}>
+								<WalletIcon width='48px' height='48px' className={classes.whyIcons} />
+							</Suspense>
 						</div>
 						<h3>UNBEATABLE VALUE</h3>
 						<p>
@@ -145,7 +163,9 @@ const WhyUs = () => {
 					</div>
 					<div className={classes.whyHead}>
 						<div className={classes.triangle6}>
-							{/* <FaMedal size='2.5em' className={classes.whyIcons} /> */}
+							<Suspense fallback={<div>Loading</div>}>
+								<MedalIcon width='48px' height='48px' className={classes.whyIcons} />
+							</Suspense>
 						</div>
 						<h3>AWARD WINNING</h3>
 						<p>

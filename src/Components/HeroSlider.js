@@ -8,54 +8,12 @@ import queenstown from '../images/queenstown.jpg';
 import kokatahi from '../images/Kokatahi.jpg';
 import mtcook from '../images/Mtcook.jpg';
 import MountainCook from '../images/MountCook.jpg';
-// import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 
-// const useStyles = makeStyles((theme) => ({
-// 	hero: {
-// 		display: 'flex',
-// 		justifyContent: 'center',
-// 		alignItems: 'center',
-// 		textAlign: 'center',
-// 		position: 'relative',
-// 		color: 'white',
-// 		height: '100%',
-// 	},
-// 	heroBackground: {
-// 		position: 'absolute',
-// 		height: '570px',
-// 		width: '100%',
-// 		objectFit: 'cover',
-// 		top: 0,
-// 		left: 0,
-// 		zIndex: -1,
-		
-// 	},
-// 	heroText: {
-// 		display: 'flex',
-// 		flexDirection: 'column',
-// 	},
-// 	heroTitle: {
-// 		fontSize: '3.5rem',
-// 	},
-// 	formControl: {
-// 		margin: theme.spacing(1),
-// 		minWidth: 120,
-// 	},
-// 	selectEmpty: {
-// 		marginTop: theme.spacing(2),
-//   },
-// 	formContainer: {
-// 		display: 'flex',
-// 		alignItems: 'center',
-// 		justifyContent: 'center',
-// 		marginTop: '20px'
-// 	},
-// }));
 
 function HeroSlider(props) {
 	const {classes} = props;

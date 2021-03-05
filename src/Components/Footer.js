@@ -1,62 +1,62 @@
-import React, { Fragment } from 'react';
-// import {
-// 	FaFacebookF,
-// 	FaTwitter,
-// 	FaInstagram,
-// 	FaGooglePlusG,
-// 	FaYoutube,
-// } from '../../node_modules/react-icons/fa';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { Fragment, Suspense } from 'react';
+import styles from '../styles/FooterStyles.js';
+import { withStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
-    footer: {
-		backgroundColor: '#28527a',
-	},
-	gutterMain: {
-		display: 'flex',
-		justifyContent: 'space-between',
-		marginRight: '20px',
-	},
-	footerIcons: {
-		display: 'flex',
-	},
-	footerBox: {
-		margin: '30px',
-	},
-}))
+const FacebookFIcon = React.lazy(() => import('../icons/FacebookFIcon'));
+const GooglePlusIcon = React.lazy(() => import('../icons/GooglePlusIcon'));
+const TwitterIcon = React.lazy(() => import('../icons/TwitterLineIcon'));
+const InstagramLineIcon = React.lazy(() =>
+	import('../icons/InstagramLineIcon')
+);
+const YoutubeIcon = React.lazy(() => import('../icons/YoutubeLineIcon'));
 
- const Footer = () => {
-    const classes = useStyles();
-    return (
-        <Fragment>
-				<div className={classes.footer}>
-					<div className={classes.gutterMain}>
-						{/* <FaFacebookF size='1.8rem' color='white' /> */}
-						<div className={classes.footerIcons}>
-							<div className={classes.footerBox}>
-								{/* <FaFacebookF size='1.8rem' color='white' /> */}
-							</div>
-							<div className={classes.footerBox}>
-								{/* <FaGooglePlusG size='1.8rem' color='white' /> */}
-								<p>About us</p>
-							</div>
-							<div className={classes.footerBox}>
-								{/* <FaInstagram size='1.8rem' color='white' /> */}
-								<p>Contact us</p>
-							</div>
-							<div className={classes.footerBox}>
-								{/* <FaYoutube size='1.8rem' color='white' /> */}
-								<p>Blog</p>
-							</div>
-							<div className={classes.footerBox}>
-								{/* <FaTwitter size='1.8rem' color='white' /> */}
-								<p>FAQ's</p>
-							</div>
+const Footer = (props) => {
+	const { classes } = props;
+	return (
+		<Fragment>
+			<div className={classes.footer}>
+				<div className={classes.gutterMain}>
+					<div className={classes.footerIcons}>
+						<div className={classes.footerBox}>
+							<a href='https://www.facebook.com/'>
+								<Suspense fallback={<div>Loading...</div>}>
+									<FacebookFIcon className={classes.iconStyle} />
+								</Suspense>
+							</a>
+						</div>
+						<div className={classes.footerBox}>
+							<a href='https://www.google.com/'>
+								<Suspense fallback={<div>Loading...</div>}>
+									<GooglePlusIcon className={classes.iconStyle} />
+								</Suspense>
+							</a>
+						</div>
+						<div className={classes.footerBox}>
+							<a href='https://twitter.com/'>
+								<Suspense fallback={<div>Loading...</div>}>
+									<TwitterIcon className={classes.iconStyle} />
+								</Suspense>
+							</a>
+						</div>
+						<div className={classes.footerBox}>
+							<a href='https://www.instagram.com/'>
+								<Suspense fallback={<div>Loading...</div>}>
+									<InstagramLineIcon className={classes.iconStyle} />
+								</Suspense>
+							</a>
+						</div>
+						<div className={classes.footerBox}>
+							<a href='https://www.youtube.com/'>
+								<Suspense fallback={<div>Loading...</div>}>
+									<YoutubeIcon className={classes.iconStyle} />
+								</Suspense>
+							</a>
 						</div>
 					</div>
 				</div>
-			</Fragment>
-    )
-}
+			</div>
+		</Fragment>
+	);
+};
 
-export default Footer;
+export default withStyles(styles, { withTheme: true })(Footer);
