@@ -8,6 +8,13 @@ import solo from '../images/solo.jpg';
 import maori from '../images/maori.jpg';
 
 const useStyles = makeStyles((theme) => ({
+	section: {
+		display: 'flex',
+		flexDirection: 'column',
+		width: '100%',
+		alignItems: 'center',
+		marginBottom: '30px',
+	},
     title: {
 		marginTop: '50px',
 		marginBottom: '0px',

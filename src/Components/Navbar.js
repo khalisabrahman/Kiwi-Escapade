@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 			display: 'block',
 		},
 		color: '#f4d160',
-		fontFamily: "'Rock Salt, cursive;'"
+		fontFamily: 'Rock Salt'
 	},
 	search: {
 		position: 'relative',
@@ -78,10 +78,10 @@ export default function SearchAppBar() {
 			<Fragment>
 				<AppBar position='fixed'>
 					<Toolbar className={classes.toolbar}>
+						{/* add a link here */}
 						<Typography className={classes.title} variant='h6' noWrap>
 							KIWI VACATIONS
-							<i class='fas fa-kiwi-bird'></i>
-							<TravelWalkIcon />
+							<TravelWalkIcon width='48px' height='48px'/>
 						</Typography>
 						<MenuItem>Small Group Tours</MenuItem>
 						<MenuItem>About Us</MenuItem>
