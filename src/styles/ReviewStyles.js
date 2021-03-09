@@ -1,5 +1,5 @@
-const styles = ((theme) => ({
-    title: {
+const styles = (theme) => ({
+	title: {
 		marginTop: '80px',
 		marginBottom: '0px',
 		display: 'flex',
@@ -20,7 +20,6 @@ const styles = ((theme) => ({
 	reviewTitle: {
 		color: '#8ac4d0',
 	},
-	subtitle: {},
 	review: {
 		color: 'rgb(85, 85, 85)',
 		width: '45ch',
@@ -31,6 +30,10 @@ const styles = ((theme) => ({
 		justifyContent: 'center',
 		marginBottom: '30px',
 	},
-}));
+	buttonStyle: {
+		width: '15ch',
+		backgroundColor: '#f4d160',
+	},
+});
 
 export default styles;

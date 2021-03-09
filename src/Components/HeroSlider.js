@@ -116,7 +116,7 @@ function HeroSlider(props) {
 						onClick={() => {
 							alert('clicked');
 						}}
-						style={{width: '20ch', backgroundColor: '#f4d160'}}
+						className={classes.button}
 					>
 						FIND MY ADVENTURE!
 					</Button>

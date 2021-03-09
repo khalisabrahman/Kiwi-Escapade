@@ -50,7 +50,7 @@ const Reviews = (props) => {
 					onClick={() => {
 						alert('clicked');
 					}}
-					style={{ width: '15ch', backgroundColor: '#f4d160' }}
+					className={classes.buttonStyle}
 				>
 					READ MORE
 				</Button>

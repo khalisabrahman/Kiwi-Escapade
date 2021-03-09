@@ -1,152 +1,190 @@
 import React, { Fragment } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import snow from '../images/Snow.jpg';
-import queenstownView from '../images/queenstownView.jpg';
-import hiking from '../images/hiking.jpg';
-import bungy from '../images/bungy.jpg';
-import solo from '../images/solo.jpg';
-import maori from '../images/maori.jpg';
+import styles from '../styles/HighlightStyles';
+import { withStyles } from '@material-ui/core/styles';
+import { useSpring, animated, config } from 'react-spring';
 
-const useStyles = makeStyles((theme) => ({
-	section: {
-		display: 'flex',
-		flexDirection: 'column',
-		width: '100%',
-		alignItems: 'center',
-		marginBottom: '30px',
-	},
-    title: {
-		marginTop: '50px',
-		marginBottom: '0px',
-		display: 'flex',
-		justifyContent: 'center',
-		fontSize: '2.75rem',
-		fontWeight: '900',
-		fontFamily: 'catamaran',
-	},
-	subtitle: {
-		display: 'flex',
-		justifyContent: 'center',
-		textAlign: 'center',
-		width: '60%',
-		padding: '0',
-		marginTop: '0px',
-	},
-    galleryWrapper: {
-		width: '100%',
-		height: '820px',
-		marginTop: '60px',
-		fontSize: '1.5em',
-		color: 'white',
-		textTransform: 'uppercase',
-		textAlign: 'center',
-		display: 'grid',
-		gridTemplateRows: '400px 400px',
-		gridTemplateColumns: '356.25px 356.25px 356.25px 356.25px',
-		gridGap: '5px',
-		backgroundColor: 'white',
-	},
-	a: {
-		gridColumn: '1/3',
-		gridRow: '1/2',
-		background: `url(${snow})`,
-		backgroundPosition: 'bottom center',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	b: {
-		gridColumn: '3/4',
-		gridRow: '1/2',
-		background: `url(${queenstownView})`,
-		backgroundPosition: 'bottom center',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	c: {
-		gridColumn: '4/5',
-		gridRow: '1/2',
-		background: `url(${hiking})`,
-		backgroundPosition: 'center',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	d: {
-		background: `url(${bungy})`,
-		backgroundPosition: 'bottom center',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	e: {
-		gridColumn: '2/3',
-		gridRow: '2/3',
-		background: `url(${solo})`,
-		backgroundPosition: 'top center',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	f: {
-		gridColumn: '3/5',
-		gridRow: '2/3',
-		background: `url(${maori})`,
-		backgroundPosition: 'top center',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-}))
+const Highlights = (props) => {
+	const { classes } = props;
 
- const Highlights = () => {
-     const classes = useStyles();
-    return (
-        <Fragment>
-					<div className={classes.section}>
-						<h1 className={classes.title}>NEW ZEALAND HIGHLIGHTS</h1>
-						<p className={classes.subtitle}>
-							After 30 years on the road, we truly are the experts on all things New
-							Zealand. Let us share and inspire you to experience our New Zealand with
-							you.
-						</p>
-					</div>
-					<div className={classes.galleryWrapper}>
-						<div className={classes.a}>
-							<h2>guide to skiing new zealand on a budget</h2>
-						</div>
-						<div className={classes.b}>
-							<h2>queenstown</h2>
-						</div>
-						<div className={classes.c}>
-							<h2>explore new zealand's great walk</h2>
-						</div>
-						<div className={classes.d}>
-							<h2>bungy</h2>
-						</div>
-						<div className={classes.e}>
-							<h2>solo travel</h2>
-						</div>
-						<div className={classes.f}>
-							<h2>Māori culture</h2>
-						</div>
-					</div>
-				</Fragment>
+	const [active, setActive] = React.useState(false);
+	const classSpring = useSpring({
+		transform: active ? 'translateY(-10px)' : 'translateY(0px)',
+		visibility: active ? 'visible' : 'hidden' 
+	});
 
-    )
-}
+	return (
+		<Fragment>
+			<div className={classes.section}>
+				<h1 className={classes.title}>NEW ZEALAND HIGHLIGHTS</h1>
+				<p className={classes.subtitle}>
+					After 30 years on the road, we truly are the experts on all things New
+					Zealand. Let us share and inspire you to experience our New Zealand with
+					you.
+				</p>
+			</div>
 
-export default Highlights;
+			<div className={classes.galleryWrapperContainer}>
+				<div className={classes.galleryWrapper}>
+					<animated.div
+						className={classes.a}
+						onMouseOver={() => setActive(true)}
+						onMouseOut={() => setActive(false)}
+					>
+						<div className={classes.hoverTint}></div>
+						<div className={classes.mainHighlight}>
+							<animated.h2
+								style={{
+									transform: classSpring.transform,
+								}}
+							>
+								guide to skiing new zealand on a budget
+							</animated.h2>
+							<div>
+								<animated.p className={classes.hoverDesc} style={{
+									visibility: classSpring.visibility,
+									transform: classSpring.transform,
+								}}>
+									Whether you’re a seasoned shredder, a bit of a snow bunny, or a
+									complete punter, hitting the mountain is a perfect choice.{' '}
+								</animated.p>
+							</div>
+						</div>
+					</animated.div>
+					<animated.div
+						className={classes.b}
+						onMouseOver={() => setActive(true)}
+						onMouseOut={() => setActive(false)}
+					>
+						<div className={classes.hoverTint}></div>
+						<div className={classes.mainHighlight}>
+							<animated.h2
+								style={{
+									transform: classSpring.transform,
+								}}
+							>
+								queenstown
+							</animated.h2>
+							<div>
+								<animated.p className={classes.hoverDesc} style={{
+									visibility: classSpring.visibility,
+									transform: classSpring.transform,
+								}}>
+									Whether you’re a seasoned shredder, a bit of a snow bunny, or a
+									complete punter, hitting the mountain is a perfect choice.{' '}
+								</animated.p>
+							</div>
+						</div>
+					</animated.div>
+					<animated.div
+						className={classes.c}
+						onMouseOver={() => setActive(true)}
+						onMouseOut={() => setActive(false)}
+					>
+						<div className={classes.hoverTint}></div>
+						<div className={classes.mainHighlight}>
+							<animated.h2
+								style={{
+									transform: classSpring.transform,
+								}}
+							>
+								explore new zealand's great walk
+							</animated.h2>
+							<div>
+								<animated.p className={classes.hoverDesc} style={{
+									visibility: classSpring.visibility,
+									transform: classSpring.transform,
+								}}>
+									Whether you’re a seasoned shredder, a bit of a snow bunny, or a
+									complete punter, hitting the mountain is a perfect choice.{' '}
+								</animated.p>
+							</div>
+						</div>
+					</animated.div>
+					<animated.div
+						className={classes.d}
+						onMouseOver={() => setActive(true)}
+						onMouseOut={() => setActive(false)}
+					>
+						<div className={classes.hoverTint}></div>
+						<div className={classes.mainHighlight}>
+							<animated.h2
+								style={{
+									transform: classSpring.transform,
+								}}
+							>
+								bungy
+							</animated.h2>
+							<div>
+								<animated.p className={classes.hoverDesc} style={{
+									visibility: classSpring.visibility,
+									transform: classSpring.transform,
+								}}>
+									Whether you’re a seasoned shredder, a bit of a snow bunny, or a
+									complete punter, hitting the mountain is a perfect choice.{' '}
+								</animated.p>
+							</div>
+						</div>
+					</animated.div>
+					<animated.div
+						className={classes.e}
+						onMouseOver={() => setActive(true)}
+						onMouseOut={() => setActive(false)}
+					>
+						<div className={classes.hoverTint}></div>
+						<div className={classes.mainHighlight}>
+							<animated.h2
+								style={{
+									transform: classSpring.transform,
+								}}
+							>
+								solo travel
+							</animated.h2>
+							<div>
+								<animated.p className={classes.hoverDesc} style={{
+									visibility: classSpring.visibility,
+									transform: classSpring.transform,
+								}}>
+									Whether you’re a seasoned shredder, a bit of a snow bunny, or a
+									complete punter, hitting the mountain is a perfect choice.{' '}
+								</animated.p>
+							</div>
+						</div>
+					</animated.div>
+					<animated.div
+						className={classes.f}
+						onMouseOver={() => setActive(true)}
+						onMouseOut={() => setActive(false)}
+					>
+						<div className={classes.hoverTint}></div>
+						<div className={classes.mainHighlight}>
+							<animated.h2
+								style={{
+									transform: classSpring.transform,
+								}}
+							>
+								Māori culture
+							</animated.h2>
+							<div>
+								<animated.p className={classes.hoverDesc} style={{
+									visibility: classSpring.visibility,
+									transform: classSpring.transform,
+								}}>
+									Whether you’re a seasoned shredder, a bit of a snow bunny, or a
+									complete punter, hitting the mountain is a perfect choice.{' '}
+								</animated.p>
+							</div>
+						</div>
+					</animated.div>			
+
+
+
+
+
+				
+				</div>
+			</div>
+		</Fragment>
+	);
+};
+
+export default withStyles(styles, { withTheme: true })(Highlights);

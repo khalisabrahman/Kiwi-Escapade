@@ -1,5 +1,5 @@
 const styles = (theme) => ({
-    hero: {
+	hero: {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -16,7 +16,6 @@ const styles = (theme) => ({
 		top: 0,
 		left: 0,
 		zIndex: -1,
-		
 	},
 	heroText: {
 		display: 'flex',
@@ -31,13 +30,17 @@ const styles = (theme) => ({
 	},
 	selectEmpty: {
 		marginTop: theme.spacing(2),
-  },
+	},
 	formContainer: {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginTop: '20px'
+		marginTop: '20px',
 	},
-})
+	button: {
+		width: '20ch',
+		backgroundColor: '#f4d160',
+	},
+});
 
 export default styles;
