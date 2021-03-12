@@ -68,7 +68,7 @@ function HeroSlider(props) {
 				/>
 			</Glide>
 				<div className={classes.formContainer}>
-					<FormControl outlined className={classes.formControl}>
+					<FormControl outlined="true" className={classes.formControl}>
 						<InputLabel id='travel-duration-label'>Travel Time</InputLabel>
 						<Select
 							labelId='travel-duration-label'

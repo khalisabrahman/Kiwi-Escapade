@@ -50,16 +50,16 @@ const styles = (theme) => ({
         
        
 	},
-	hoverTint: {
-		position: 'absolute',
-		top: '0px',
-		bottom: '0px',
-		left: '0px',
-		right: '0px',
-		zIndex: '1',
-		display: 'block',
-		backgroundColor: 'rgba(0,0,0,0.15)'
-	},
+	// hoverTint: {
+	// 	position: 'absolute',
+	// 	top: '0px',
+	// 	bottom: '0px',
+	// 	left: '0px',
+	// 	right: '0px',
+	// 	zIndex: '1',
+	// 	display: 'block',
+	// 	backgroundColor: 'rgba(0,0,0,0.15)'
+	// },
 	mainHighlight: {
 		zIndex: '2',
 		color: 'white',
