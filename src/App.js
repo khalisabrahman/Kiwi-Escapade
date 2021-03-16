@@ -9,8 +9,6 @@ import Highlights from './Components/Highlights';
 import Reviews from './Components/Reviews';
 import Stories from './Components/Stories';
 import Footer from './Components/Footer';
-import Test from './Components/Test';
-import Boop from './Components/Boop';
 import './App.css';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
@@ -43,8 +41,6 @@ function App() {
 					<Reviews />
 					<Stories />
 					<Footer />
-					<Test />
-					<Boop />
 				</Suspense>
 			</ThemeProvider>
 		</Fragment>

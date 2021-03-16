@@ -37,10 +37,12 @@ const styles = (theme) => ({
 		justifyContent: 'center',
 		marginTop: '20px',
 	},
-	button: {
+	buttonStyle: {
 		width: '20ch',
 		backgroundColor: '#f4d160',
 	},
+
+	
 });
 
 export default styles;

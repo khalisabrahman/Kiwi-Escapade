@@ -1,37 +1,28 @@
-import React from 'react'
+import React from 'react';
+import { animated, useSpring } from 'react-spring';
 
- const Boop = ({ rotation = 0, timing = 150, children }) => {
-     const [isBooped, setIsBooped] = React.useState(false);
+const Boop = ({ timing = 150, children }) => {
+	const [isBooped, setIsBooped] = React.useState(false);
 
-     const style = {
-         display: 'inline-block',
-         backfaceVisibility: 'hidden',
-         transform: isBooped ? `rotate(${rotation}deg)` : `rotate(0deg)`,
-         transition: `transform ${timing}ms`,
-     };
+	const style = useSpring({
+		display: 'inline-block',
+		backfaceVisibility: 'hidden',
+		opacity: isBooped ? 1 : 0,
+        cursor: 'pointer'
+	});
 
-     React.useEffect(() => {
-         if (!isBooped) {
-             return;
-         }
-
-         const timeoutId =  window.setTimeout(() => {
-            setIsBooped(false);
-         }, timing)
-
-         return () => {
-             window.clearTimeout(timeoutId);
-         };
-     }, [isBooped, timing])
-
-    const trigger = () => {
-        setIsBooped(true);
-    }
-    return (
-        <span onMouseEnter={trigger} style={style}>
-            {children}
-        </span>
-    )
-}
+	const trigger = (value) => {
+		setIsBooped(value);
+	};
+	return (
+		<animated.span
+			onMouseEnter={() => trigger(!isBooped)}
+			onMouseLeave={() => trigger(!isBooped)}
+			style={style}
+		>
+			{children}
+		</animated.span>
+	);
+};
 
 export default Boop;

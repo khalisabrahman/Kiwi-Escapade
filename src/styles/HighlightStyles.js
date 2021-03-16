@@ -6,14 +6,14 @@ import solo from '../images/solo.jpg';
 import maori from '../images/maori.jpg';
 
 const styles = (theme) => ({
-    section: {
+	section: {
 		display: 'flex',
 		flexDirection: 'column',
 		width: '100%',
 		alignItems: 'center',
 		marginBottom: '30px',
 	},
-    title: {
+	title: {
 		marginTop: '100px',
 		marginBottom: '0px',
 		display: 'flex',
@@ -30,12 +30,12 @@ const styles = (theme) => ({
 		padding: '0',
 		marginTop: '0px',
 	},
-    galleryWrapperContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        width: '100%'
-    },
-    galleryWrapper: {
+	galleryWrapperContainer: {
+		display: 'flex',
+		justifyContent: 'center',
+		width: '100%',
+	},
+	galleryWrapper: {
 		height: '820px',
 		marginTop: '60px',
 		fontSize: '1.5em',
@@ -46,9 +46,6 @@ const styles = (theme) => ({
 		gridTemplateRows: '400px 400px',
 		gridTemplateColumns: '356.25px 356.25px 356.25px 356.25px',
 		gridGap: '5px',
-		
-        
-       
 	},
 	// hoverTint: {
 	// 	position: 'absolute',
@@ -64,7 +61,7 @@ const styles = (theme) => ({
 		zIndex: '2',
 		color: 'white',
 		display: 'block',
-		margin: '0px'
+		margin: '0px',
 	},
 	a: {
 		position: 'relative',
@@ -130,38 +127,82 @@ const styles = (theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-    },
-    App: {
-        fontFamily: 'sans-serif',
-        textAlign: 'center',
-      },
-      
-      button: {
-        display: 'inline-block',
-        padding: '1em 2em',
-        background: '#5dc77a',
-        color: '#fff',
-        textDecoration: 'none',
-        fontSize: '1.5em',
-        fontWeight: '700',
-        border: 'none',
-        cursor: 'pointer',
-        position: 'relative',
-        overflow: 'hidden',
-        marginBottom: '2em',
-        width: '15ch'
-      },
-      
-	  hoverDesc: {
-		  fontSize: '1rem',
-		  textTransform: 'none',
-		  visibility: 'hidden',
-		  maxHeight: '0'
+	},
+	App: {
+		fontFamily: 'sans-serif',
+		textAlign: 'center',
+	},
+
+	button: {
+		display: 'inline-block',
+		padding: '1em 2em',
+		background: '#5dc77a',
+		color: '#fff',
+		textDecoration: 'none',
+		fontSize: '1.5em',
+		fontWeight: '700',
+		border: 'none',
+		cursor: 'pointer',
+		position: 'relative',
+		overflow: 'hidden',
+		marginBottom: '2em',
+		width: '15ch',
+	},
+
+	hoverDesc: {
+		fontSize: '1rem',
+		textTransform: 'none',
+		
+		overflow: 'hidden',
+		position: 'relative',
+	},
+	test: {
+		margin: '0px',
+	},
+	testButton: {
+		
+			background: '#2bced6',
+			border: 'none',
+			height: '50px',
+			width: '50px',
+			borderRadius: '100px',
+			marginTop: '-25px',
+			display: 'block',
+			float: 'right',
+			marginRight: '30px',
+			color: '#393e46',
+		  
+	},
+	expand: {
+		background: '#2bced6',
+		border: 'none',
+		height: '50px',
+		width: '50px',
+		borderRadius: '100px',
+		marginTop: '-25px',
+		display: 'block',
+		float: 'right',
+		marginRight: '30px',
+		color: '#393e46',
+		position: 'relative'
 	  },
-	  test: {
-		  margin: '0px'
+	  
+	  content: {
+		padding: '15px 30px',
+	  },
+	  
+	  wrapper :{
+		maxWidth: '500px',
+	  },
+	  
+	  accordion: {
+		background: '#eeeeee',
+		borderRadius: '30px',
+		overflow: 'hidden',
+		position: 'relative',
+		paddingBottom: '30px',
 	  }
-      
+	  
 });
 
 export default styles;
