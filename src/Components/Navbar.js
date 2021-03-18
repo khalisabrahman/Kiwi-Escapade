@@ -81,7 +81,7 @@ export default function SearchAppBar() {
 						{/* add a link here */}
 						<Typography className={classes.title} variant='h6' noWrap>
 							KIWI VACATIONS
-							<TravelWalkIcon width='48px' height='48px'/>
+							{/* <TravelWalkIcon width='36px' height='36px'/> */}
 						</Typography>
 						<MenuItem>Small Group Tours</MenuItem>
 						<MenuItem>About Us</MenuItem>

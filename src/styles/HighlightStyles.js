@@ -47,18 +47,9 @@ const styles = (theme) => ({
 		gridTemplateColumns: '356.25px 356.25px 356.25px 356.25px',
 		gridGap: '5px',
 	},
-	// hoverTint: {
-	// 	position: 'absolute',
-	// 	top: '0px',
-	// 	bottom: '0px',
-	// 	left: '0px',
-	// 	right: '0px',
-	// 	zIndex: '1',
-	// 	display: 'block',
-	// 	backgroundColor: 'rgba(0,0,0,0.15)'
-	// },
+	
 	mainHighlight: {
-		zIndex: '2',
+		
 		color: 'white',
 		display: 'block',
 		margin: '0px',
@@ -67,18 +58,19 @@ const styles = (theme) => ({
 		position: 'relative',
 		gridColumn: '1/3',
 		gridRow: '1/2',
-		background: `url(${snow})`,
+		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url(${snow})`,
 		backgroundPosition: 'center center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+		
 	},
 	b: {
 		gridColumn: '3/4',
 		gridRow: '1/2',
-		background: `url(${queenstownView})`,
+		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${queenstownView})`,
 		backgroundPosition: 'bottom center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -89,7 +81,7 @@ const styles = (theme) => ({
 	c: {
 		gridColumn: '4/5',
 		gridRow: '1/2',
-		background: `url(${hiking})`,
+		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${hiking})`,
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -98,7 +90,7 @@ const styles = (theme) => ({
 		alignItems: 'center',
 	},
 	d: {
-		background: `url(${bungy})`,
+		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${bungy})`,
 		backgroundPosition: 'bottom center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -109,7 +101,7 @@ const styles = (theme) => ({
 	e: {
 		gridColumn: '2/3',
 		gridRow: '2/3',
-		background: `url(${solo})`,
+		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${solo})`,
 		backgroundPosition: 'top center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -120,7 +112,7 @@ const styles = (theme) => ({
 	f: {
 		gridColumn: '3/5',
 		gridRow: '2/3',
-		background: `url(${maori})`,
+		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${maori})`,
 		backgroundPosition: 'top center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -150,59 +142,14 @@ const styles = (theme) => ({
 	},
 
 	hoverDesc: {
+		display: 'none',
 		fontSize: '1rem',
 		textTransform: 'none',
-		
+		opacity: '0',
 		overflow: 'hidden',
-		position: 'relative',
-	},
-	test: {
-		margin: '0px',
-	},
-	testButton: {
 		
-			background: '#2bced6',
-			border: 'none',
-			height: '50px',
-			width: '50px',
-			borderRadius: '100px',
-			marginTop: '-25px',
-			display: 'block',
-			float: 'right',
-			marginRight: '30px',
-			color: '#393e46',
-		  
-	},
-	expand: {
-		background: '#2bced6',
-		border: 'none',
-		height: '50px',
-		width: '50px',
-		borderRadius: '100px',
-		marginTop: '-25px',
-		display: 'block',
-		float: 'right',
-		marginRight: '30px',
-		color: '#393e46',
-		position: 'relative'
-	  },
-	  
-	  content: {
-		padding: '15px 30px',
-	  },
-	  
-	  wrapper :{
-		maxWidth: '500px',
-	  },
-	  
-	  accordion: {
-		background: '#eeeeee',
-		borderRadius: '30px',
-		overflow: 'hidden',
-		position: 'relative',
-		paddingBottom: '30px',
-	  }
-	  
+	
+	}
 });
 
 export default styles;

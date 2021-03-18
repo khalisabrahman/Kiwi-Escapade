@@ -1,5 +1,5 @@
 import React from 'react';
-import Boop from './Boop'
+import Boop from '../Components/Boop'
 import { Spring } from 'react-spring/';
 import styles from '../styles/HighlightStyles';
 import { withStyles } from '@material-ui/core/styles';

@@ -3,7 +3,7 @@ import React from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import styles from '../styles/HighlightStyles';
 import { withStyles } from '@material-ui/core/styles';
-import Boop from './Boop';
+import Boop from '../Components/Boop';
 
 const Test = () => {
    
