@@ -1,11 +1,16 @@
 import React, { Fragment } from 'react';
 import AppBar from '@material-ui/core/AppBar';
+import { useTheme } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import SearchIcon from '@material-ui/icons/Search';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Menu from '@material-ui/core/Menu';
 import TravelWalkIcon from '../icons/TravelWalkIcon';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,20 +19,18 @@ const useStyles = makeStyles((theme) => ({
 	},
 	toolbar: {
 		backgroundColor: '#28527a',
-		
+		// [theme.breakpoints.down('md')]: {},
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
-		
 	},
 	title: {
 		flexGrow: 1,
-		display: 'none',
 		[theme.breakpoints.up('sm')]: {
 			display: 'block',
 		},
 		color: '#f4d160',
-		fontFamily: 'Rock Salt'
+		fontFamily: 'Rock Salt',
 	},
 	search: {
 		position: 'relative',
@@ -72,7 +75,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchAppBar() {
 	const classes = useStyles();
-
+	const theme = useTheme();
+	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+	const [anchorEl, setAnchorEl] = React.useState(null);
+	const open = Boolean(anchorEl);
 	return (
 		<div className={classes.root}>
 			<Fragment>
@@ -83,26 +89,61 @@ export default function SearchAppBar() {
 							KIWI VACATIONS
 							{/* <TravelWalkIcon width='36px' height='36px'/> */}
 						</Typography>
-						<MenuItem>Small Group Tours</MenuItem>
-						<MenuItem>About Us</MenuItem>
-						<MenuItem>New Zealand Destinations</MenuItem>
-						<MenuItem>Travel Info</MenuItem>
-						<div className={classes.search}>
-							<div className={classes.searchIcon}>
-								<SearchIcon />
-							</div>
-							<InputBase
-								placeholder='Search…'
-								classes={{
-									root: classes.inputRoot,
-									input: classes.inputInput,
-								}}
-								inputProps={{ 'aria-label': 'search' }}
-							/>
-						</div>
+						{isMobile ? (
+							<>
+								<IconButton
+									edge='false'
+									// className={classes.menuButton}
+									color='inherit'
+									aria-label='menu'
+								>
+									<MenuIcon fontSize='large' />
+								</IconButton>
+								<Menu
+									id='menu-appbar'
+									anchorEl={anchorEl}
+									anchorOrigin={{
+										vertical: 'top',
+										horizontal: 'right',
+									}}
+									keepMounted
+									transformOrigin={{
+										vertical: 'top',
+										horizontal: 'right',
+									}}
+									open={open}
+									onClose={() => setAnchorEl(null)}
+								>
+									<MenuItem>Small Group Tours</MenuItem>
+									<MenuItem>About Us</MenuItem>
+									<MenuItem>New Zealand Destinations</MenuItem>
+									<MenuItem>New Zealand Destinations</MenuItem>
+									<MenuItem>Travel Info</MenuItem>
+								</Menu>
+							</>
+						) : (
+							<>
+								<MenuItem>Small Group Tours</MenuItem>
+								<MenuItem>About Us</MenuItem>
+								<MenuItem>New Zealand Destinations</MenuItem>
+								<MenuItem>Travel Info</MenuItem>
+								<div className={classes.search}>
+									<div className={classes.searchIcon}>
+										<SearchIcon />
+									</div>
+									<InputBase
+										placeholder='Search…'
+										classes={{
+											root: classes.inputRoot,
+											input: classes.inputInput,
+										}}
+										inputProps={{ 'aria-label': 'search' }}
+									/>
+								</div>
+							</>
+						)}
 					</Toolbar>
 				</AppBar>
-				<Toolbar />
 			</Fragment>
 		</div>
 	);
