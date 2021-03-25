@@ -23,6 +23,9 @@ const styles = (theme) => ({
 	},
 	heroTitle: {
 		fontSize: '3.5rem',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '3rem'
+		}
 	},
 	formControl: {
 		margin: theme.spacing(1),

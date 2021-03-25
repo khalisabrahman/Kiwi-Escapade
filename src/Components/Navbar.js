@@ -79,6 +79,12 @@ export default function SearchAppBar() {
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
+	const handleMenuClick = () => {
+		setAnchorEl(null);
+	};
+	const handleMenu = (event) => {
+		setAnchorEl(event.currentTarget);
+	};
 	return (
 		<div className={classes.root}>
 			<Fragment>
@@ -96,6 +102,7 @@ export default function SearchAppBar() {
 									// className={classes.menuButton}
 									color='inherit'
 									aria-label='menu'
+									onClick={handleMenu}
 								>
 									<MenuIcon fontSize='large' />
 								</IconButton>
@@ -114,11 +121,10 @@ export default function SearchAppBar() {
 									open={open}
 									onClose={() => setAnchorEl(null)}
 								>
-									<MenuItem>Small Group Tours</MenuItem>
-									<MenuItem>About Us</MenuItem>
-									<MenuItem>New Zealand Destinations</MenuItem>
-									<MenuItem>New Zealand Destinations</MenuItem>
-									<MenuItem>Travel Info</MenuItem>
+									<MenuItem onClick={() => handleMenuClick()}>Small Group Tours</MenuItem>
+									<MenuItem onClick={() => handleMenuClick()}>About Us</MenuItem>
+									<MenuItem onClick={() => handleMenuClick()}>New Zealand Destinations</MenuItem>
+									<MenuItem onClick={() => handleMenuClick()}>Travel Info</MenuItem>
 								</Menu>
 							</>
 						) : (
