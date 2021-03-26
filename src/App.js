@@ -17,6 +17,15 @@ const theme = createMuiTheme({
 	typography: {
 		fontFamily: font,
 	},
+	breakpoints: {
+		values: {
+			xs: 0,
+			sm: 682,
+			md: 896,
+			lg: 992,
+			xl: 1202,
+		},
+	},
 });
 
 // const TravelStyles = React.lazy(() => import('./Components/TravelStyles'));

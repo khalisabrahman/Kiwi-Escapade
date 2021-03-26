@@ -88,7 +88,7 @@ export default function SearchAppBar() {
 	return (
 		<div className={classes.root}>
 			<Fragment>
-				<AppBar position='fixed'>
+				<AppBar position='static'>
 					<Toolbar className={classes.toolbar}>
 						{/* add a link here */}
 						<Typography className={classes.title} variant='h6' noWrap>

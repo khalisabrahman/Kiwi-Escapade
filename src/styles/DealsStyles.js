@@ -7,12 +7,15 @@ const styles = (theme) => ({
 		fontSize: '2.75rem',
 		fontWeight: '900',
 		fontFamily: 'catamaran',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '1.1rem'
+		}
 	},
 	subtitle: {
 		display: 'flex',
 		justifyContent: 'center',
 		textAlign: 'center',
-		width: '60%',
+		width: '70%',
 		padding: '0',
 		marginTop: '0px',
 	},
@@ -21,6 +24,10 @@ const styles = (theme) => ({
 		justifyContent: 'center',
 		position: 'relative',
 		marginBottom: '70px',
+		[theme.breakpoints.down('xs')]: {
+			flexDirection: 'column',
+			alignItems: 'center'
+		}
 	},
 
 	dealBox: {
@@ -45,6 +52,7 @@ const styles = (theme) => ({
 		color: 'white',
 		margin: '0',
 		lineHeight: '20px',
+		
 	},
 	label: {
 		position: 'relative',
@@ -74,13 +82,7 @@ const styles = (theme) => ({
 			fontSize: '1rem',
 			textTransform: 'uppercase',
 		},
-		'& p::after': {
-			content: "''",
-			width: '0',
-			height: '0',
-			borderTop: '20px solid #30353a',
-			borderRight: '20px solid transparent',
-		},
+		
 	},
 
 	section: {
