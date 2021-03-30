@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SearchAppBar() {
 	const classes = useStyles();
 	const theme = useTheme();
-	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+	const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 	const handleMenuClick = () => {

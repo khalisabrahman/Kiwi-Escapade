@@ -7,6 +7,10 @@ const styles = (theme) => ({
 		fontSize: '2.75rem',
 		fontWeight: '900',
 		fontFamily: 'catamaran',
+		textAlign: 'center',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '1.1rem',
+		},
 	},
 	section: {
 		display: 'flex',

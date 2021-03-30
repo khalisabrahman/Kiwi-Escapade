@@ -9,6 +9,7 @@ const styles = (theme) => ({
 		fontSize: '2.75rem',
 		fontWeight: '900',
 		fontFamily: 'catamaran',
+		textAlign: 'center'
 	},
 	subtitle: {
 		display: 'flex',

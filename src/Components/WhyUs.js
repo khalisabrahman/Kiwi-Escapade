@@ -28,10 +28,21 @@ const useStyles = makeStyles((theme) => ({
 			fontWeight: '900',
 			fontFamily: 'catamaran',
 		},
+		width: '100vw',
+		overflowX: 'auto',
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '1.1rem',
+			'& h1': {
+				
+				fontSize: '1.1rem',
+			
+			},
+		},
 	},
 	whyUsContainer: {
 		display: 'flex',
 		justifyContent: 'center',
+		
 	},
 	whyHead: {
 		fontSize: '1rem',

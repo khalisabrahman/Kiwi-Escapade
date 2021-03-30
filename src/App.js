@@ -20,10 +20,10 @@ const theme = createMuiTheme({
 	breakpoints: {
 		values: {
 			xs: 0,
-			sm: 682,
-			md: 896,
-			lg: 992,
-			xl: 1202,
+			sm: 429,
+			md: 638,
+			lg: 768,
+			xl: 1000,
 		},
 	},
 });
@@ -46,7 +46,7 @@ function App() {
 				<Suspense fallback={<div>Loading...</div>}>
 					<TravelStyles />
 					<WhyUs />
-					<Highlights />
+					{/* <Highlights /> */}
 					<Reviews />
 					<Stories />
 					<Footer />

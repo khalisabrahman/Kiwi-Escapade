@@ -24,9 +24,12 @@ const styles = (theme) => ({
 		justifyContent: 'center',
 		position: 'relative',
 		marginBottom: '70px',
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down('lg')]: {
 			flexDirection: 'column',
 			alignItems: 'center'
+		},
+		[theme.breakpoints.down('sm')]: {
+			marginBottom: '0px',
 		}
 	},
 
