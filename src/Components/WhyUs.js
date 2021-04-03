@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		backgroundColor: '#f3f3f3',
-		height: '661px',
+		height: 'min-content',
 		alignItems: 'center',
 		'& h1': {
 			paddingTop: '70px',
@@ -29,25 +29,26 @@ const useStyles = makeStyles((theme) => ({
 			fontFamily: 'catamaran',
 		},
 		width: '100vw',
-		overflowX: 'auto',
+		paddingBottom: '20px',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '1.1rem',
 			'& h1': {
-				
 				fontSize: '1.1rem',
-			
 			},
 		},
 	},
 	whyUsContainer: {
 		display: 'flex',
 		justifyContent: 'center',
-		
+		maxWidth: '100vw',
+		flexWrap: 'wrap',
+		overflow: 'hidden',
 	},
 	whyHead: {
 		fontSize: '1rem',
 		display: 'block',
-		width: '175px',
+		maxWidth: '175px',
+		minWidth: '175px',
 		height: '350px',
 		margin: '10px',
 	},

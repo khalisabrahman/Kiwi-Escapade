@@ -41,13 +41,13 @@ function App() {
 		<Fragment>
 			<ThemeProvider theme={theme}>
 				<Navbar />
-				<HeroSlider />
+				{/* <HeroSlider /> */}
 				<Deals />
 				<Suspense fallback={<div>Loading...</div>}>
 					<TravelStyles />
 					<WhyUs />
 					{/* <Highlights /> */}
-					<Reviews />
+					{/* <Reviews /> */}
 					<Stories />
 					<Footer />
 				</Suspense>
