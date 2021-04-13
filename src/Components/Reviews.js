@@ -14,7 +14,7 @@ const Reviews = (props) => {
 			</div>
 			<Glide
 				height={'570px'}
-				width={'100%'}
+				width={'100vw'}
 				// autoPlay={true}
 				// autoPlaySpeed={3500}
 				dots={false}
@@ -28,7 +28,7 @@ const Reviews = (props) => {
 								justifyContent: 'center',
 								alignItems: 'center',
 								height: '500px',
-								width: '100%',
+								width: '100vw',
 							}}
 						>
 							<div>

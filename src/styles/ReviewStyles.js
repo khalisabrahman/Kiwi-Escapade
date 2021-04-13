@@ -1,3 +1,5 @@
+import 'react-glide/lib/reactGlide.css';
+
 const styles = (theme) => ({
 	title: {
 		marginTop: '80px',
@@ -15,18 +17,21 @@ const styles = (theme) => ({
 	section: {
 		display: 'flex',
 		flexDirection: 'column',
-		width: '100%',
+		width: '100vw',
 		alignItems: 'center',
+		marginBottom: '35px'
 	},
 	stars: {
 		color: 'yellow',
 	},
 	reviewTitle: {
 		color: '#8ac4d0',
+		textAlign: 'center',
+		fontSize: '1.2rem'
 	},
 	review: {
 		color: 'rgb(85, 85, 85)',
-		width: '45ch',
+		maxWidth: '45ch',
 	},
 	buttonContainer: {
 		width: '100%',
@@ -38,6 +43,7 @@ const styles = (theme) => ({
 		width: '15ch',
 		backgroundColor: '#f4d160',
 	},
+	
 });
 
 export default styles;
