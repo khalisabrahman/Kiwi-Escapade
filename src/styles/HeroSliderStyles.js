@@ -7,15 +7,17 @@ const styles = (theme) => ({
 		position: 'relative',
 		color: 'white',
 		height: '100%',
+		overflow: 'hidden'
 	},
 	heroBackground: {
 		position: 'absolute',
 		height: '570px',
-		width: '100%',
+		width: '100vw',
 		objectFit: 'cover',
 		top: 0,
 		left: 0,
 		zIndex: -1,
+		overflow: 'hidden'
 	},
 	heroText: {
 		display: 'flex',

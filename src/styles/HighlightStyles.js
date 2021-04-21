@@ -33,7 +33,7 @@ const styles = (theme) => ({
 	galleryWrapperContainer: {
 		display: 'flex',
 		justifyContent: 'center',
-		width: '100%',
+		width: '100vw',
 	},
 	galleryWrapper: {
 		height: '820px',

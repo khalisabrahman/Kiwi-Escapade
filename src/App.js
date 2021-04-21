@@ -28,13 +28,6 @@ const theme = createMuiTheme({
 	},
 });
 
-// const TravelStyles = React.lazy(() => import('./Components/TravelStyles'));
-// const WhyUs = React.lazy(() => import('./Components/WhyUs'));
-// const Highlights = React.lazy(() => import('./Components/Highlights'));
-// const Reviews = React.lazy(() => import('./Components/Reviews'));
-// const Stories = React.lazy(() => import('./Components/Stories'));
-// const Footer = React.lazy(() => import('./Components/Footer'));
-// const Test = React.lazy(() => import('./Components/Test'));
 
 function App() {
 	return (
@@ -44,12 +37,12 @@ function App() {
 				<HeroSlider />
 				<Deals />
 				<Suspense fallback={<div>Loading...</div>}>
-					{/* <TravelStyles /> */}
+					<TravelStyles />
 					<WhyUs />
-					{/* <Highlights /> */}
-					{/* <Reviews /> */}
-					{/* <Stories />
-					<Footer /> */}
+					<Highlights />
+					<Reviews />
+					<Stories />
+					<Footer /> 
 				</Suspense>
 			</ThemeProvider>
 		</Fragment>

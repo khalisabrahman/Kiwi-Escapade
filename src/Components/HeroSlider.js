@@ -36,7 +36,7 @@ function HeroSlider(props) {
 		<>
 			<Glide
 				height={'570px'}
-				width={'100%'}
+				width={'100vw'}
 				// autoPlay={true}
 				// autoPlaySpeed={3500}
 				dots={false}
@@ -56,15 +56,15 @@ function HeroSlider(props) {
 
 				<LazyLoadImage
 					src={kokatahi} alt='kokatahi'
-					style={{ height: '570px', width: '100%', objectFit: 'cover', top: 0 }}
+					style={{ height: '570px', width: '100vw', objectFit: 'cover', top: 0 }}
 				/>
 				<LazyLoadImage
 					src={mtcook} alt='mount cook'
-					style={{ height: '570px', width: '100%', objectFit: 'cover', top: 0 }}
+					style={{ height: '570px', width: '100vw', objectFit: 'cover', top: 0 }}
 				/>
 				<LazyLoadImage
 					src={MountainCook} alt='mount cook'
-					style={{ height: '570px', width: '100%', objectFit: 'cover', top: 0 }}
+					style={{ height: '570px', width: '100vw', objectFit: 'cover', top: 0 }}
 				/>
 			</Glide>
 				<div className={classes.formContainer}>
