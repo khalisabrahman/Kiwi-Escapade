@@ -36,15 +36,19 @@ const styles = (theme) => ({
 		width: '100vw',
 	},
 	galleryWrapper: {
-		height: '820px',
+		height: '100vh',
 		marginTop: '60px',
 		fontSize: '1.5em',
 		color: 'white',
 		textTransform: 'uppercase',
 		textAlign: 'center',
 		display: 'grid',
-		gridTemplateRows: '400px 400px',
-		gridTemplateColumns: '356.25px 356.25px 356.25px 356.25px',
+		gridTemplateRows: '1fr 1fr',
+		gridTemplateColumns: '1fr 1fr 1fr 1fr',
+		gridTemplateAreas: `
+		'a a b c'
+		'd e f f'
+		` ,
 		gridGap: '5px',
 	},
 	
@@ -56,8 +60,7 @@ const styles = (theme) => ({
 	},
 	a: {
 		position: 'relative',
-		gridColumn: '1/3',
-		gridRow: '1/2',
+		gridArea: 'a',
 		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url(${snow})`,
 		backgroundPosition: 'center center',
 		backgroundRepeat: 'no-repeat',
@@ -68,8 +71,7 @@ const styles = (theme) => ({
 		
 	},
 	b: {
-		gridColumn: '3/4',
-		gridRow: '1/2',
+		gridArea: 'b',
 		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${queenstownView})`,
 		backgroundPosition: 'bottom center',
 		backgroundRepeat: 'no-repeat',
@@ -79,8 +81,7 @@ const styles = (theme) => ({
 		alignItems: 'center',
 	},
 	c: {
-		gridColumn: '4/5',
-		gridRow: '1/2',
+		gridArea: 'c',
 		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${hiking})`,
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
@@ -97,10 +98,10 @@ const styles = (theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+		gridArea: 'd',
 	},
 	e: {
-		gridColumn: '2/3',
-		gridRow: '2/3',
+		gridArea: 'e',
 		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${solo})`,
 		backgroundPosition: 'top center',
 		backgroundRepeat: 'no-repeat',
@@ -110,8 +111,7 @@ const styles = (theme) => ({
 		alignItems: 'center',
 	},
 	f: {
-		gridColumn: '3/5',
-		gridRow: '2/3',
+		gridArea: 'f',
 		background: `linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)),url(${maori})`,
 		backgroundPosition: 'top center',
 		backgroundRepeat: 'no-repeat',

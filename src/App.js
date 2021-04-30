@@ -43,9 +43,7 @@ function App() {
 					<Highlights />
 					<Reviews />
 					<Stories />
-					<Test />
-					<Footer /> 
-					
+					<Footer /> 			
 				</Suspense>
 			</ThemeProvider>
 		</Fragment>
