@@ -12,6 +12,9 @@ const styles = (theme) => ({
 		width: '100%',
 		alignItems: 'center',
 		marginBottom: '30px',
+		[theme.breakpoints.down('md')]: {
+			marginBottom: '10px'
+		},
 	},
 	title: {
 		marginTop: '100px',
@@ -21,6 +24,10 @@ const styles = (theme) => ({
 		fontSize: '2.75rem',
 		fontWeight: '900',
 		fontFamily: 'catamaran',
+		textAlign: 'center',
+		[theme.breakpoints.down('md')]: {
+			fontSize: '1.4rem'
+		},
 	},
 	subtitle: {
 		display: 'flex',
@@ -50,6 +57,36 @@ const styles = (theme) => ({
 		'd e f f'
 		` ,
 		gridGap: '5px',
+		[theme.breakpoints.down('lg')]: {
+			gridTemplateColumns: '0.7fr 0.3fr 0.3fr 0.7fr',
+			gridTemplateRows: '1fr 1fr 1fr',
+			gridTemplateAreas: `
+			'a a a b'
+			'c c d d'
+			'e f f f'
+			`
+		},
+		[theme.breakpoints.down('md')]: {
+			gridTemplateColumns: '1fr 1fr',
+			gridTemplateRows: '1fr 1fr 1fr',
+			gridTemplateAreas: `
+			'a b'
+			'c d'
+			'e f'
+			`
+		},
+		[theme.breakpoints.down('sm')]: {
+			gridTemplateColumns: '1fr',
+			gridTemplateRows: '1fr',
+			gridTemplateAreas: `
+			'a'
+			'b'
+			'c'
+			'd'
+			'e'
+			'f'
+			`
+		}
 	},
 	
 	mainHighlight: {
@@ -57,6 +94,9 @@ const styles = (theme) => ({
 		color: 'white',
 		display: 'block',
 		margin: '0px',
+		[theme.breakpoints.down('lg')]: {
+			fontSize: '0.9rem'
+		}
 	},
 	a: {
 		position: 'relative',
@@ -99,6 +139,9 @@ const styles = (theme) => ({
 		justifyContent: 'center',
 		alignItems: 'center',
 		gridArea: 'd',
+		[theme.breakpoints.down('md')]: {
+			backgroundPosition: 'center',
+		}
 	},
 	e: {
 		gridArea: 'e',
@@ -109,6 +152,9 @@ const styles = (theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+		[theme.breakpoints.down('md')]: {
+			backgroundPosition: 'center',
+		}
 	},
 	f: {
 		gridArea: 'f',
@@ -147,6 +193,9 @@ const styles = (theme) => ({
 		textTransform: 'none',
 		opacity: '0',
 		overflow: 'hidden',
+		[theme.breakpoints.down('lg')]: {
+			fontSize: '0.95rem'
+		}
 		
 	
 	}
