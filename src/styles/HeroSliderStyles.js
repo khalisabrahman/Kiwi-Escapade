@@ -41,7 +41,8 @@ const styles = (theme) => ({
 		alignItems: 'center',
 		justifyContent: 'center',
 		marginTop: '20px',
-		width: '100vw'
+		flexWrap: 'wrap'
+		// width: '100vw'
 	},
 	buttonStyle: {
 		width: '20ch',

@@ -34,7 +34,7 @@ function App() {
 		<Fragment>
 			<ThemeProvider theme={theme}>
 				<Navbar />
-				{/* <HeroSlider /> */}
+				<HeroSlider />
 				<Deals />
 				<Suspense fallback={<div>Loading...</div>}>
 					<TravelStyles />
