@@ -37,13 +37,13 @@ const styles = (theme) => ({
 		padding: '0',
 		marginTop: '0px',
 	},
-	galleryWrapperContainer: {
-		display: 'flex',
-		justifyContent: 'center',
-		width: '100vw',
-	},
+	// galleryWrapperContainer: {
+	// 	display: 'flex',
+	// 	justifyContent: 'center',
+	// 	width: '100vw',
+	// },
 	galleryWrapper: {
-		height: '100vh',
+		height: '100%',
 		marginTop: '60px',
 		fontSize: '1.5em',
 		color: 'white',

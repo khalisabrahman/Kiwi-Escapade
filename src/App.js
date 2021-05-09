@@ -1,5 +1,5 @@
 import React, { Fragment, Suspense } from 'react';
-
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Navbar from './Components/Navbar';
 import HeroSlider from './Components/HeroSlider';
 import Deals from './Components/Deals';
@@ -28,23 +28,24 @@ const theme = createMuiTheme({
 	},
 });
 
-
 function App() {
 	return (
 		<Fragment>
-			<ThemeProvider theme={theme}>
-				<Navbar />
-				<HeroSlider />
-				<Deals />
-				<Suspense fallback={<div>Loading...</div>}>
-					<TravelStyles />
-					<WhyUs />
-					<Highlights />
-					<Reviews />
-					<Stories />
-					<Footer /> 			
-				</Suspense>
-			</ThemeProvider>
+			<CssBaseline>
+				<ThemeProvider theme={theme}>
+					<Navbar />
+					<HeroSlider />
+					<Deals />
+					<Suspense fallback={<div>Loading...</div>}>
+						<TravelStyles />
+						<WhyUs />
+						<Highlights />
+						<Reviews />
+						<Stories />
+						<Footer />
+					</Suspense>
+				</ThemeProvider>
+			</CssBaseline>
 		</Fragment>
 	);
 }

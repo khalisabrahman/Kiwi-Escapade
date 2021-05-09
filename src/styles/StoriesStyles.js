@@ -31,9 +31,9 @@ const styles = (theme) => ({
 	socialMediaContainer: {
 		backgroundColor: 'white',
 		borderRadius: '50%',
-		padding: '5px',
-		width: '40px',
-		height: '40px',
+		
+		width: '50px',
+		height: '50px',
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -46,7 +46,8 @@ const styles = (theme) => ({
         }
 	},
 	iconStyle: {
-		width: '48px',
+		marginTop: '5px',
+		width: '32px',
 		height: '32px',
 	},
 	iconContainer: {
